@@ -8,10 +8,17 @@
 </head>
 <body>
     <h1>Generate Paragraph</h1>
-    <script src="script.js"></script>
     <label for="inputText">Enter your text:</label>
     <textarea id="inputText" rows="4" cols="50"></textarea>
     <button onclick="generateParagraph()">Generate</button>
     <textarea id="output" readonly rows="4" cols="50"></textarea>
+    <script>
+        function generateParagraph() {
+            var inputText = document.getElementById('inputText').value;
+            var preparedMessage = "some prepared message "; // You can modify this message
+            var outputParagraph = preparedMessage + inputText;
+            document.getElementById('output').value = outputParagraph;
+        }
+    </script>
 </body>
 </html>
